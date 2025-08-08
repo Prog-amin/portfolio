@@ -457,143 +457,160 @@ function initializeContinuousTypewriter() {
     // Create particles
     createParticles();
 
-    // Enhanced notification system
-    function showNotification(message, type = 'info') {
-        // Remove existing notifications
-        const existingNotifications = document.querySelectorAll('.notification');
-        existingNotifications.forEach(notification => {
-            notification.remove();
-        });
+// Enhanced notification system with emoji detection
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notification => {
+        notification.remove();
+    });
 
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification--${type}`;
-        notification.innerHTML = `
-            <div class="notification__content">
-                <span class="notification__icon">${type === 'success' ? '✓' : type === 'error' ? '✗' : 'ℹ'}</span>
-                <span class="notification__message">${message}</span>
-                <button class="notification__close">&times;</button>
-            </div>
-        `;
-        
-        // Add styles for notification
-        const notificationStyles = `
-            .notification {
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                padding: 16px 24px;
-                border-radius: 12px;
-                color: white;
-                font-weight: 500;
-                z-index: 9999;
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-                max-width: 350px;
-                word-wrap: break-word;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-                backdrop-filter: blur(10px);
-            }
-            
-            .notification__content {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-            }
-            
-            .notification__close {
-                background: none;
-                border: none;
-                color: white;
-                font-size: 18px;
-                cursor: pointer;
-                margin-left: auto;
-                opacity: 0.8;
-                padding: 0;
-                width: 20px;
-                height: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .notification__close:hover {
-                opacity: 1;
-            }
-            
-            .notification__icon {
-                font-size: 18px;
-                font-weight: bold;
-            }
-            
-            .notification--success {
-                background: linear-gradient(135deg, #00d4ff, #28ca42);
-                border: 1px solid rgba(40, 202, 66, 0.3);
-            }
-            
-            .notification--error {
-                background: linear-gradient(135deg, #ff6b6b, #ff5f57);
-                border: 1px solid rgba(255, 107, 107, 0.3);
-            }
-            
-            .notification--info {
-                background: linear-gradient(135deg, #00d4ff, #ff6b6b);
-                border: 1px solid rgba(0, 212, 255, 0.3);
-            }
-            
-            .notification.show {
-                transform: translateX(0);
-            }
+    // Detect if message starts with an emoji
+    const emojiRegex = /^(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)/u;
+    const startsWithEmoji = emojiRegex.test(message);
+    
+    let iconToShow;
+    let messageToShow = message;
+    
+    if (startsWithEmoji) {
+        // Extract the emoji from the message
+        const emojiMatch = message.match(emojiRegex);
+        iconToShow = emojiMatch[0];
+        messageToShow = message.replace(emojiRegex, '').trim(); // Remove emoji from message
+    } else {
+        // Use default icons based on type
+        iconToShow = type === 'success' ? '✓' : type === 'error' ? '✗' : 'ℹ';
+    }
 
-            @media (max-width: 480px) {
-                .notification {
-                    top: 10px;
-                    right: 10px;
-                    left: 10px;
-                    max-width: none;
-                }
-            }
-        `;
-        
-        // Add notification styles if not already added
-        if (!document.querySelector('#notification-styles')) {
-            const notificationStyleSheet = document.createElement('style');
-            notificationStyleSheet.id = 'notification-styles';
-            notificationStyleSheet.textContent = notificationStyles;
-            document.head.appendChild(notificationStyleSheet);
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification--${type}`;
+    notification.innerHTML = `
+        <div class="notification__content">
+            <span class="notification__icon">${iconToShow}</span>
+            <span class="notification__message">${messageToShow}</span>
+            <button class="notification__close">&times;</button>
+        </div>
+    `;
+    
+    // Add styles for notification
+    const notificationStyles = `
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 16px 24px;
+            border-radius: 12px;
+            color: white;
+            font-weight: 500;
+            z-index: 9999;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            max-width: 350px;
+            word-wrap: break-word;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
         }
         
-        document.body.appendChild(notification);
+        .notification__content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .notification__close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: auto;
+            opacity: 0.8;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .notification__close:hover {
+            opacity: 1;
+        }
+        
+        .notification__icon {
+            font-size: 18px;
+            font-weight: bold;
+            min-width: 18px;
+        }
+        
+        .notification--success {
+            background: linear-gradient(135deg, #00d4ff, #28ca42);
+            border: 1px solid rgba(40, 202, 66, 0.3);
+        }
+        
+        .notification--error {
+            background: linear-gradient(135deg, #ff6b6b, #ff5f57);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+        
+        .notification--info {
+            background: linear-gradient(135deg, #00d4ff, #ff6b6b);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
 
-        // Add close button functionality
-        const closeBtn = notification.querySelector('.notification__close');
-        closeBtn.addEventListener('click', () => {
+        @media (max-width: 480px) {
+            .notification {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+            }
+        }
+    `;
+    
+    // Add notification styles if not already added
+    if (!document.querySelector('#notification-styles')) {
+        const notificationStyleSheet = document.createElement('style');
+        notificationStyleSheet.id = 'notification-styles';
+        notificationStyleSheet.textContent = notificationStyles;
+        document.head.appendChild(notificationStyleSheet);
+    }
+    
+    document.body.appendChild(notification);
+
+    // Add close button functionality
+    const closeBtn = notification.querySelector('.notification__close');
+    closeBtn.addEventListener('click', () => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    });
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Remove notification after 5 seconds
+    setTimeout(() => {
+        if (notification.classList.contains('show')) {
             notification.classList.remove('show');
             setTimeout(() => {
                 if (notification.parentNode) {
                     notification.parentNode.removeChild(notification);
                 }
             }, 300);
-        });
-        
-        // Show notification
-        setTimeout(() => {
-            notification.classList.add('show');
-        }, 100);
-        
-        // Remove notification after 5 seconds
-        setTimeout(() => {
-            if (notification.classList.contains('show')) {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
-                }, 300);
-            }
-        }, 5000);
-    }
-
+        }
+    }, 5000);
+}
     // Enhanced WhatsApp form handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
