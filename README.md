@@ -24,7 +24,7 @@ A responsive and interactive web portfolio showcasing my skills, projects, and p
 
 ## 🌐 Live Site
 
-Check it out here: [https://prog-amin.github.io/my-portfolio](https://prog-amin.github.io/my-portfolio)
+Check it out here: [https://progami.site](https://progami.site)
 
 ---
 ## 📁 Folder Structure
@@ -32,7 +32,7 @@ Check it out here: [https://prog-amin.github.io/my-portfolio](https://prog-amin.
 Portfolio/
 ├── index.html
 ├── style.css
-├── script.js
+├── app.js
 └── assets/
 └── images/
 
