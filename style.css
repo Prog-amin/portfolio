@@ -2900,7 +2900,7 @@ html {
   }
 
   .price {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-sm);
   }
 
   /* Project Cards - Add side margins */
