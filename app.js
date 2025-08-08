@@ -938,7 +938,7 @@ ${new Date().toLocaleString('en-US', {
         
         // Show welcome message after a delay
         setTimeout(() => {
-            showNotification('👋 Welcome to ProgaMi Portfolio!', 'success');
+            showNotification('👋 Welcome to my Portfolio!', 'success');
         }, 3000);
     });
 
