@@ -921,7 +921,7 @@ ${new Date().toLocaleString('en-US', {
         
         // Show welcome message after a delay
         setTimeout(() => {
-            showNotification('Welcome to ProgaMi Portfolio! 🚀 Navigation fixed - all features working perfectly!', 'success');
+            showNotification('Welcome to ProgaMi Portfolio!', 'success');
         }, 3000);
     });
 
