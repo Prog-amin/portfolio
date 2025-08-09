@@ -2900,7 +2900,7 @@ html {
   }
 
   .price {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-sm);
   }
 
   /* Project Cards - Add side margins */
@@ -2923,28 +2923,28 @@ html {
     padding: var(--space-20);
   }
 
-  .project-card__title {
-    font-size: var(--font-size-md);
-  }
+.project-card__title {
+  font-size: var(--font-size-lg);
+}
 
   .project-card__description {
     font-size: var(--font-size-sm);
     margin-bottom: var(--space-16);
   }
 
-  .project-card__tech {
-    gap: var(--space-4);
-    margin-bottom: var(--space-16);
-  }
+.project-card__tech {
+  gap: 0.4em; /* Scales with font context */
+  margin-bottom: 1.2em;
+}
 
-  .project-card__tech .tech-tag {
-    font-size: 9px;
-    padding: var(--space-2) var(--space-6);
-  }
+.project-card__tech .tech-tag {
+  font-size: 9px;
+  padding: 0.2em 0.6em; /* Scales with the 9px font size */
+}
 
-  .project-card__actions {
-    gap: var(--space-6);
-  }
+.project-card__actions {
+  gap: 0.5em; /* Scales with the font size context */
+}
 
   /* Featured Project Mobile - Add margins */
   .featured-project__image {
@@ -2962,10 +2962,10 @@ html {
     margin-bottom: var(--space-20);
   }
 
-  .featured-project__tech {
-    gap: var(--space-6);
-    margin-bottom: var(--space-20);
-  }
+.featured-project__tech {
+  gap: 0.5em; /* Scales with the font size of child elements */
+  margin-bottom: 1em; /* Scales proportionally */
+}
 
   .featured-project__features h4 {
     font-size: var(--font-size-md);
@@ -3357,15 +3357,16 @@ html {
   }
 
   /* Tech Tags Ultra Small */
-  .tech-tag {
-    padding: var(--space-2) var(--space-4);
-    font-size: 8px;
-  }
+/* Tech Tags Ultra Small */
+.tech-tag {
+  padding: 0.25em 0.5em; /* Scales with font size */
+  font-size: 8px;
+}
 
-  .project-card__tech .tech-tag {
-    font-size: 8px;
-    padding: var(--space-1) var(--space-4);
-  }
+.project-card__tech .tech-tag {
+  font-size: 8px;
+  padding: 0.125em 0.5em; /* Scales with font size */
+}
 
   /* Featured Project Ultra Small - Maintain margins */
   .featured-project__image {
