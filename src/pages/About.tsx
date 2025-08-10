@@ -51,14 +51,18 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            My <span className="text-gradient-primary">Journey</span>
+            About <span className="text-gradient-primary">Me</span>
           </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Passionate about creating intelligent solutions that bridge the gap between complex technology and real-world business needs.
+          </p>
         </div>
 
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           {/* Story */}
           <div className="animate-fade-in">
+            <h2 className="text-3xl font-bold mb-6 text-gradient-accent">My Journey</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 I'm an <strong className="text-foreground">AI Engineer</strong> at Corelayerlink, where I develop cutting-edge AI solutions and work on machine learning projects in a collaborative research environment. My focus is on building scalable AI systems that contribute to product innovation.

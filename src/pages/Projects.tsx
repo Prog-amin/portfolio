@@ -161,7 +161,10 @@ const Projects = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             My <span className="text-gradient-primary">Projects</span>
           </h1>
-
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A showcase of innovative solutions spanning AI/ML, web development, and mobile applications. 
+            Each project demonstrates technical excellence and real-world impact.
+          </p>
         </div>
 
         {/* Category Filter */}
