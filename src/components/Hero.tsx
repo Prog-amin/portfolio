@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-12 h-12 sm:w-24 sm:h-24 bg-gradient-accent rounded-full opacity-20 animate-float" style={{ animationDelay: '-1s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 sm:pt-28 md:pt-32">
         <div className="animate-slide-up">
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 font-inter">
