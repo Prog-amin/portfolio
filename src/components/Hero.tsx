@@ -23,33 +23,33 @@ const Hero = () => {
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-primary rounded-full opacity-20 animate-float"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-gradient-accent rounded-full opacity-30 animate-float" style={{ animationDelay: '-2s' }}></div>
-        <div className="absolute bottom-40 left-20 w-12 h-12 bg-gradient-primary rounded-full opacity-25 animate-float" style={{ animationDelay: '-4s' }}></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-accent rounded-full opacity-20 animate-float" style={{ animationDelay: '-1s' }}></div>
+        <div className="absolute top-10 sm:top-20 left-4 sm:left-10 w-10 h-10 sm:w-20 sm:h-20 bg-gradient-primary rounded-full opacity-20 animate-float"></div>
+        <div className="absolute top-32 sm:top-40 right-6 sm:right-20 w-8 h-8 sm:w-16 sm:h-16 bg-gradient-accent rounded-full opacity-30 animate-float" style={{ animationDelay: '-2s' }}></div>
+        <div className="absolute bottom-32 sm:bottom-40 left-8 sm:left-20 w-6 h-6 sm:w-12 sm:h-12 bg-gradient-primary rounded-full opacity-25 animate-float" style={{ animationDelay: '-4s' }}></div>
+        <div className="absolute bottom-10 sm:bottom-20 right-4 sm:right-10 w-12 h-12 sm:w-24 sm:h-24 bg-gradient-accent rounded-full opacity-20 animate-float" style={{ animationDelay: '-1s' }}></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-slide-up">
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-inter">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 font-inter">
             <span className="block text-foreground">Hi, I'm</span>
             <span className="block text-gradient-primary">Al Amin</span>
             {/* <span className="block text-2xl md:text-4xl text-gradient-accent font-medium mt-2">(ProgaMi)</span> */}
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 max-w-4xl mx-auto leading-relaxed px-2">
             <span className="text-gradient-primary font-semibold">AI Engineer</span> & 
             <span className="text-gradient-accent font-semibold"> Full-Stack Developer</span>
           </p>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto px-2">
             Transforming business challenges into intelligent digital solutions
           </p>
 
           {/* Skills Pills */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 px-2">
             {skills.map((skill, index) => (
               <div 
                 key={skill} 
@@ -62,7 +62,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-12 px-4">
             <Link to="/projects">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground px-8 py-6 text-lg font-semibold hover-lift glow-primary">
                 View My Work <ArrowRight className="w-5 h-5 ml-2" />
@@ -77,7 +77,7 @@ const Hero = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-muted-foreground px-4">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
               <span className="text-sm">Chennai, Tamil Nadu, India</span>
@@ -97,7 +97,7 @@ const Hero = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center gap-4 mt-8">
+          <div className="flex justify-center gap-3 sm:gap-4 mt-8">
             <a 
               href="https://linkedin.com/in/al-amin23" 
               target="_blank" 
@@ -119,8 +119,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-accent rounded-full flex justify-center">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-5 sm:w-6 h-9 sm:h-10 border-2 border-accent rounded-full flex justify-center">
           <div className="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>

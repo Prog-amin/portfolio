@@ -121,7 +121,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
           <div className="animate-fade-in">
             <h2 className="text-3xl font-bold mb-8 text-gradient-accent">Get In Touch</h2>
@@ -154,7 +154,7 @@ const Contact = () => {
             {/* Social Links */}
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4">Connect on Social</h3>
-              <div className="flex gap-4">
+              <div className="flex gap-3 sm:gap-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={social.label}
@@ -208,7 +208,7 @@ const Contact = () => {
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name" className="text-sm font-medium">Name *</Label>
                     <Input

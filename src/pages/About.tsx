@@ -59,7 +59,7 @@ const About = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-16">
           {/* Story */}
           <div className="animate-fade-in">
             <h2 className="text-3xl font-bold mb-6 text-gradient-accent">My Journey</h2>
@@ -78,7 +78,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
               <Link to="/experience">
                 <Button className="bg-gradient-primary hover:opacity-90 text-primary-foreground hover-lift">
                   View Experience <Briefcase className="w-4 h-4 ml-2" />
@@ -146,7 +146,7 @@ const About = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Services <span className="text-gradient-accent">Offered</span>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <Card key={service.title} className="bg-gradient-card p-6 hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="flex items-start justify-between mb-4">
@@ -173,7 +173,7 @@ const About = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             <span className="text-gradient-primary">Education</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {education.map((edu, index) => (
               <Card key={edu.degree} className="bg-gradient-card p-6 hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="flex items-start justify-between mb-4">

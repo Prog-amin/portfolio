@@ -103,7 +103,7 @@ const Skills = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             <span className="text-gradient-accent">Core Expertise</span>
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {topSkills.map((skill, index) => (
               <Card key={skill.name} className="bg-gradient-card p-6 hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="mb-4">
@@ -131,7 +131,7 @@ const Skills = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Detailed <span className="text-gradient-primary">Breakdown</span>
           </h2>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             {skillCategories.map((category, index) => (
               <Card 
                 key={category.title} 
@@ -171,7 +171,7 @@ const Skills = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             <span className="text-gradient-accent">Technologies & Tools</span>
           </h2>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {[
               'Python', 'JavaScript', 'TypeScript', 'React', 'NextJS', 'Django', 'FastAPI', 'Flask',
               'TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'NumPy', 'OpenAI', 'Hugging Face',

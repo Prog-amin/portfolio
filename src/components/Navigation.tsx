@@ -40,7 +40,7 @@ const Navigation = () => {
             <img
               src={logo}
               alt="Logo"
-              className="h-12 w-auto object-contain"
+              className="h-8 sm:h-10 w-auto object-contain"
             />
           </Link>
 
@@ -77,7 +77,7 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="md:hidden bg-card border-t border-border">
-          <div className="px-4 py-6 space-y-2">
+          <div className="px-4 py-6 space-y-2 max-h-[70vh] overflow-y-auto">
             {navigation.map((item) => (
               <Link
                 key={item.name}

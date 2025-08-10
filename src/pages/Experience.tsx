@@ -97,7 +97,7 @@ const Experience = () => {
           
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-primary hidden md:block"></div>
+            <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-primary hidden md:block"></div>
             
             <div className="space-y-8">
               {experiences.map((exp, index) => (
@@ -105,7 +105,7 @@ const Experience = () => {
                   {/* Timeline Dot */}
                   <div className="absolute left-6 w-4 h-4 bg-gradient-primary rounded-full border-4 border-background hidden md:block"></div>
                   
-                  <Card className="md:ml-16 bg-gradient-card p-6 hover-lift">
+                  <Card className="md:ml-12 lg:ml-16 bg-gradient-card p-6 hover-lift">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <div className="flex items-center gap-3 mb-2 sm:mb-0">
                         <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
@@ -238,7 +238,7 @@ const Experience = () => {
             Career <span className="text-gradient-accent">Highlights</span>
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             <Card className="bg-gradient-card p-6 text-center hover-lift animate-fade-in">
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="w-8 h-8 text-primary-foreground" />

@@ -187,7 +187,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {filteredProjects.map((project, index) => (
             <Card 
               key={project.title} 
@@ -215,7 +215,7 @@ const Projects = () => {
                 <img src={project.image} alt={`${project.title} project thumbnail`} className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
               </div>
-              <p className="text-muted-foreground mb-4">{project.description}</p>
+              <p className="text-muted-foreground mb-4 text-sm sm:text-base">{project.description}</p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                 {project.longDescription}
               </p>
@@ -243,7 +243,7 @@ const Projects = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {project.links.live && (
                   <Button 
                     asChild 
