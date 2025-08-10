@@ -243,7 +243,7 @@ const Experience = () => {
               <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Briefcase className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-bold mb-2">3+ Years</h3>
+              <h3 className="text-xl font-bold mb-2">2+ Years</h3>
               <p className="text-muted-foreground">Professional Experience</p>
             </Card>
             
@@ -251,7 +251,7 @@ const Experience = () => {
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-bold mb-2">50+ Projects</h3>
+              <h3 className="text-xl font-bold mb-2">10+ Projects</h3>
               <p className="text-muted-foreground">Completed Successfully</p>
             </Card>
             

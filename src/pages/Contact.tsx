@@ -66,24 +66,27 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`${formData.subject} - ${formData.projectType}`);
-    const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Project Type: ${formData.projectType}
 
-Message:
-${formData.message}
-    `);
-    
-    const mailtoLink = `mailto:alamin03rockz@gmail.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
+    // Send via WhatsApp
+    const phone = '919363661594'; // WhatsApp requires country code without '+'
+    const text = encodeURIComponent(
+      `*Freelance inquiry*\n\n` +
+      `*Name:* ${formData.name}\n` +
+      `*Email:* ${formData.email}\n` +
+      `*Project Type:* ${formData.projectType}\n` +
+      `*Subject:* ${formData.subject}\n` +
+      `*Message:*\n${formData.message}`
+    );
+    const whatsappUrl = `https://wa.me/${phone}?text=${text}`;
+
+    const opened = window.open(whatsappUrl, '_blank');
+    if (!opened) {
+      window.location.href = whatsappUrl;
+    }
+
     toast({
-      title: "Opening email client...",
-      description: "Your message has been prepared in your default email application.",
+      title: "Opening WhatsApp...",
+      description: "Your message has been prepared in WhatsApp.",
     });
 
     // Reset form
@@ -189,7 +192,7 @@ ${formData.message}
                   <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-2">
                     <Users className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <h4 className="font-semibold">50+ Projects</h4>
+                  <h4 className="font-semibold">10+ Projects</h4>
                   <p className="text-sm text-muted-foreground">Successfully delivered</p>
                 </div>
               </div>
@@ -283,7 +286,7 @@ ${formData.message}
                   className="w-full bg-gradient-primary hover:opacity-90 text-primary-foreground hover-lift glow-primary"
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  Send on WhatsApp
                 </Button>
               </form>
             </Card>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Menu, X, Home, User, Briefcase, Code, Mail, Award } from 'lucide-react';
+import logo from '@/assets/logo-progami.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,14 +36,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">P</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-gradient-primary font-bold text-xl">ProgaMi</h1>
-              <p className="text-muted-foreground text-xs">AI Engineer</p>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="Logo"
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

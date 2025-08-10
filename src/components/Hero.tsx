@@ -35,7 +35,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 font-inter">
             <span className="block text-foreground">Hi, I'm</span>
             <span className="block text-gradient-primary">Al Amin</span>
-            <span className="block text-2xl md:text-4xl text-gradient-accent font-medium mt-2">(ProgaMi)</span>
+            {/* <span className="block text-2xl md:text-4xl text-gradient-accent font-medium mt-2">(ProgaMi)</span> */}
           </h1>
 
           {/* Tagline */}

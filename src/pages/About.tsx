@@ -28,7 +28,7 @@ const About = () => {
 
   const education = [
     {
-      degree: 'BCA (Bachelor of Computer Applications)',
+      degree: 'Bachelor of Computer Applications',
       institution: 'Loyola College',
       location: 'Chennai, India',
       period: '2022 - 2025',
@@ -36,7 +36,7 @@ const About = () => {
       description: 'Comprehensive foundation in computer science fundamentals including programming languages, database systems, and Full-Stack development methodologies. Graduated with honors.'
     },
     {
-      degree: 'Accounts',
+      degree: 'Accounting',
       institution: 'Anjuman Matr. Hr. Sec. School',
       location: 'Chennai, India',
       period: '2021 - 2022',
