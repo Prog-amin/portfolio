@@ -70,7 +70,7 @@ const Contact = () => {
     // Send via WhatsApp
     const phone = '919363661594'; // WhatsApp requires country code without '+'
     const text = encodeURIComponent(
-      `*Freelance inquiry*\n\n` +
+      `*Freelance inquiry*\n` +
       `*Name:* ${formData.name}\n` +
       `*Email:* ${formData.email}\n` +
       `*Project Type:* ${formData.projectType}\n` +
