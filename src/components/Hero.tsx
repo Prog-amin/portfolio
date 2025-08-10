@@ -49,7 +49,7 @@ const Hero = () => {
           </p>
 
           {/* Skills Pills */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 px-2">
+          {/* <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12 px-2">
             {skills.map((skill, index) => (
               <div 
                 key={skill} 
@@ -59,7 +59,7 @@ const Hero = () => {
                 {skill}
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-12 px-4">

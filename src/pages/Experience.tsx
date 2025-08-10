@@ -82,18 +82,12 @@ const Experience = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            My <span className="text-gradient-primary">Experience</span>
+            Professional <span className="text-gradient-primary">Experience</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A journey through my professional growth, from internships to full-time roles, showcasing impactful projects and continuous learning.
-          </p>
         </div>
 
         {/* Experience Timeline */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Professional <span className="text-gradient-accent">Journey</span>
-          </h2>
           
           <div className="relative">
             {/* Timeline Line */}
