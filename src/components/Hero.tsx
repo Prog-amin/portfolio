@@ -65,13 +65,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link to="/projects">
               <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground px-8 py-6 text-lg font-semibold hover-lift glow-primary">
-                View My Work <span className="icon-wrap-gradient ml-2"><ArrowRight className="w-5 h-5" /></span>
+                View My Work <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             
             <Link to="/contact">
               <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-6 text-lg font-semibold hover-lift">
-                Let's Connect <span className="icon-wrap-gradient ml-2"><Mail className="w-5 h-5" /></span>
+                Let's Connect <Mail className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>
@@ -79,17 +79,17 @@ const Hero = () => {
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
             <div className="flex items-center gap-2">
-              <span className="icon-wrap-gradient"><MapPin className="w-4 h-4" /></span>
+              <MapPin className="w-4 h-4" />
               <span className="text-sm">Chennai, Tamil Nadu, India</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="icon-wrap-gradient"><Phone className="w-4 h-4" /></span>
+              <Phone className="w-4 h-4" />
               <a href="tel:+919363661594" className="text-sm hover:text-accent transition-colors">
                 +91 93636 61594
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <span className="icon-wrap-gradient"><Mail className="w-4 h-4" /></span>
+              <Mail className="w-4 h-4" />
               <a href="mailto:alamin03rockz@gmail.com" className="text-sm hover:text-accent transition-colors">
                 alamin03rockz@gmail.com
               </a>
@@ -104,7 +104,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center hover:bg-gradient-primary hover:text-primary-foreground transition-all duration-300 hover-lift"
             >
-              <span className="icon-wrap-gradient"><Linkedin className="w-5 h-5" /></span>
+              <Linkedin className="w-5 h-5" />
             </a>
             <a 
               href="https://github.com/Prog-amin" 
@@ -112,7 +112,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="w-12 h-12 bg-card border border-border rounded-full flex items-center justify-center hover:bg-gradient-primary hover:text-primary-foreground transition-all duration-300 hover-lift"
             >
-              <span className="icon-wrap-gradient"><Github className="w-5 h-5" /></span>
+              <Github className="w-5 h-5" />
             </a>
           </div>
         </div>
