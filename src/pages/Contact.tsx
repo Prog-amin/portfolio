@@ -113,19 +113,13 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Let's <span className="text-gradient-primary">Connect</span>
+            Get <span className="text-gradient-primary">In Touch</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to turn your ideas into reality? I'm here to help you build innovative solutions 
-            that drive results. Let's discuss your project!
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
           <div className="animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-gradient-accent">Get In Touch</h2>
-            
             {/* Contact Methods */}
             <div className="space-y-6 mb-8">
               {contactInfo.map((contact, index) => (

@@ -91,18 +91,13 @@ const Skills = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            My <span className="text-gradient-primary">Skills</span>
+          Core <span className="text-gradient-primary">Expertise</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical expertise and proficiency levels across different technologies and domains.
-          </p>
         </div>
 
         {/* Top Skills Overview */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            <span className="text-gradient-accent">Core Expertise</span>
-          </h2>
+          
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {topSkills.map((skill, index) => (
               <Card key={skill.name} className="bg-gradient-card p-6 hover-lift animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
