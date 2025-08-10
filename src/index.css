@@ -120,13 +120,6 @@
     @apply bg-background text-foreground;
   }
 
-  h1, h2, h3 {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
