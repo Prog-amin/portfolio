@@ -10,7 +10,7 @@ This is the source code for my personal portfolio website showcasing projects, e
 
 ### Local Development
 ```sh
-npm i
+npm install
 npm run dev
 ```
 
