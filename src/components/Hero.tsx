@@ -64,14 +64,14 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-12 px-4">
             <Link to="/projects">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground px-8 py-6 text-lg font-semibold hover-lift glow-primary">
-                View My Work <ArrowRight className="w-5 h-5 ml-2" />
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground w-full sm:w-auto px-5 py-4 sm:px-8 sm:py-6 text-base sm:text-lg font-semibold hover-lift glow-primary">
+                View My Work <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Button>
             </Link>
             
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground px-8 py-6 text-lg font-semibold hover-lift">
-                Let's Connect <Mail className="w-5 h-5 ml-2" />
+              <Button variant="outline" size="lg" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground w-full sm:w-auto px-5 py-4 sm:px-8 sm:py-6 text-base sm:text-lg font-semibold hover-lift">
+                Let's Connect <Mail className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Button>
             </Link>
           </div>
