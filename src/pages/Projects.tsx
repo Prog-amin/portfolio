@@ -5,6 +5,13 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, Play, Brain, BarChart3, Database, MessageSquare, Smartphone, Globe } from 'lucide-react';
 
+import ragAgentImg from '@/assets/projects/rag-agent.jpg';
+import airlineAnalyzerImg from '@/assets/projects/airline-analyzer.jpg';
+import dataAnalystAgentImg from '@/assets/projects/data-analyst-agent.jpg';
+import pdfQaImg from '@/assets/projects/pdf-qa-chatbot.jpg';
+import aalampanaImg from '@/assets/projects/aalampana-platform.jpg';
+import fitnessAppImg from '@/assets/projects/fitness-app.jpg';
+
 const Projects = () => {
   const projects = [
     {
@@ -15,6 +22,7 @@ const Projects = () => {
       category: 'AI/ML',
       status: 'Live',
       icon: Brain,
+      image: ragAgentImg,
       links: {
         live: 'https://huggingface.co/spaces/Prog-amin/federal-rag-agentic-chatbot',
         github: 'https://github.com/Prog-amin/federal-rag-agentic-chatbot2'
@@ -35,6 +43,7 @@ const Projects = () => {
       category: 'Data Analytics',
       status: 'Complete',
       icon: BarChart3,
+      image: airlineAnalyzerImg,
       links: {
         demo: 'https://www.youtube.com/watch?v=RhJnKhCWQL0',
         github: 'https://github.com/Prog-amin/airline-market-demand-analyzer'
@@ -55,6 +64,7 @@ const Projects = () => {
       category: 'AI/ML',
       status: 'Live',
       icon: Database,
+      image: dataAnalystAgentImg,
       links: {
         live: 'https://prog-amin-data-analyst-agent.streamlit.app/',
         github: 'https://github.com/Prog-amin/data-analyst-agent'
@@ -75,6 +85,7 @@ const Projects = () => {
       category: 'AI/ML',
       status: 'Complete',
       icon: MessageSquare,
+      image: pdfQaImg,
       links: {
         live: 'https://huggingface.co/spaces/Prog-amin/pdf-qa-chatbot/tree/main'
       },
@@ -94,6 +105,7 @@ const Projects = () => {
       category: 'Web Development',
       status: 'Live',
       icon: Globe,
+      image: aalampanaImg,
       links: {
         live: 'https://www.aalampana.com/'
       },
@@ -113,6 +125,7 @@ const Projects = () => {
       category: 'Mobile Development',
       status: 'In Progress',
       icon: Smartphone,
+      image: fitnessAppImg,
       links: {},
       features: [
         'AI-powered workout plan generation',
@@ -198,6 +211,10 @@ const Projects = () => {
                 </Badge>
               </div>
 
+              <div className="aspect-video rounded-lg overflow-hidden mb-4 relative">
+                <img src={project.image} alt={`${project.title} project thumbnail`} className="w-full h-full object-cover" loading="lazy" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+              </div>
               <p className="text-muted-foreground mb-4">{project.description}</p>
               <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                 {project.longDescription}
