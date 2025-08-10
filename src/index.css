@@ -120,6 +120,12 @@
     @apply bg-background text-foreground;
   }
 
+  /* Main titles gradient */
+  h1, h2, h3 {
+    @apply text-gradient-primary;
+  }
+
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
@@ -238,7 +244,14 @@
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     animation: shimmer 2s infinite;
   }
+
+  /* Gradient icon wrapper */
+  .icon-wrap-gradient {
+    @apply inline-flex items-center justify-center rounded-md p-1 text-primary-foreground shadow;
+    background: var(--gradient-primary);
+  }
 }
+
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }

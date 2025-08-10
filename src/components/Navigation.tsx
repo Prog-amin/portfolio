@@ -57,7 +57,7 @@ const Navigation = () => {
                     : 'text-foreground hover:text-primary hover:bg-secondary'
                 }`}
               >
-                <item.icon className="w-4 h-4" />
+                <span className="icon-wrap-gradient"><item.icon className="w-4 h-4" /></span>
                 <span>{item.name}</span>
               </Link>
             ))}
@@ -90,7 +90,7 @@ const Navigation = () => {
                     : 'text-foreground hover:text-primary hover:bg-secondary'
                 }`}
               >
-                <item.icon className="w-5 h-5" />
+                <span className="icon-wrap-gradient"><item.icon className="w-5 h-5" /></span>
                 <span>{item.name}</span>
               </Link>
             ))}
