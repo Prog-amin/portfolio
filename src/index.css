@@ -237,6 +237,11 @@
     position: relative;
   }
 
+  /* Use site cyan for Core Expertise section bars */
+  .core-expertise .skill-progress {
+    background: var(--gradient-accent);
+  }
+
   .skill-progress::after {
     content: '';
     position: absolute;

@@ -96,7 +96,7 @@ const Skills = () => {
         </div>
 
         {/* Top Skills Overview */}
-        <section className="mb-16">
+        <section className="mb-16 core-expertise">
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {topSkills.map((skill, index) => (
