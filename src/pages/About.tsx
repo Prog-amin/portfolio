@@ -9,19 +9,19 @@ const About = () => {
     {
       title: 'Web Development',
       technologies: 'React, NextJS, Django, FastAPI',
-      price: '₹1000',
+      price: '₹999',
       description: 'Modern, responsive web applications built with cutting-edge technologies.'
     },
     {
       title: 'Mobile App Development',
       technologies: 'React Native, JavaScript, Firebase',
-      price: '₹3000',
+      price: '₹2999',
       description: 'Cross-platform mobile apps with native performance and user experience.'
     },
     {
       title: 'AI Solutions',
       technologies: 'Python, TensorFlow, PyTorch, LLMs',
-      price: '₹2000',
+      price: '₹1999',
       description: 'Intelligent systems leveraging machine learning and natural language processing.'
     }
   ];
